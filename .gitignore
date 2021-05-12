@@ -1,0 +1,8 @@
+.idea
+.gradle
+*/.idea
+*/*.iml
+*/build
+docker-compose-simple.yml
+docker-compose.yml
+kubernetes

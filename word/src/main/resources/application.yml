@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active: dockerfile
+  data:
+    r2dbc:
+      repositories:
+        enabled: true
+
+---
+spring:
+  config:
+    activate:
+      on-profile: development
+  r2dbc:
+    url: "r2dbc:postgresql://localhost:5432/postgres"
+    username: "postgres"
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dockerfile
+  r2dbc:
+    url: "r2dbc:postgresql://db:5432/postgres"
+    username: "postgres"

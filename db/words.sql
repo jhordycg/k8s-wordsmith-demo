@@ -1,8 +1,8 @@
-CREATE TABLE nouns (word TEXT NOT NULL);
-CREATE TABLE verbs (word TEXT NOT NULL);
-CREATE TABLE adjectives (word TEXT NOT NULL);
+CREATE TABLE noun (word TEXT NOT NULL);
+CREATE TABLE verb (word TEXT NOT NULL);
+CREATE TABLE adjective (word TEXT NOT NULL);
 
-INSERT INTO nouns(word) VALUES
+INSERT INTO noun(word)VALUES
   ('cloud'),
   ('elephant'),
   ('gø language'),
@@ -22,7 +22,7 @@ INSERT INTO nouns(word) VALUES
   ('flødebolle'),
   ('smørrebrød');
 
-INSERT INTO verbs(word) VALUES
+INSERT INTO verb(word)VALUES
   ('will drink'),
   ('smashes'),
   ('smøkes'),
@@ -36,7 +36,7 @@ INSERT INTO verbs(word) VALUES
   ('hides'),
   ('will ship');
 
-INSERT INTO adjectives(word) VALUES
+INSERT INTO adjective(word) VALUES
   ('the exquisite'),
   ('a pink'),
   ('the røtten'),
