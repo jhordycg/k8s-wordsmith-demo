@@ -5,7 +5,7 @@ services:
     build: db
     image: jhordycg/k8s-wordsmith-db
 
-  words:
+  word:
     build: word
     image: jhordycg/k8s-wordsmith-api
 

@@ -13,8 +13,8 @@ import (
 func main() {
 	rand.Seed(time.Now().UnixNano())
 
-	fwd := &forwarder{"words", 8080}
-	http.Handle("/words/", http.StripPrefix("/words", fwd))
+	fwd := &forwarder{"word", 8080}
+	http.Handle("/word/", http.StripPrefix("/word", fwd))
 	http.Handle("/", http.FileServer(http.Dir("static")))
 
 	fmt.Println("Listening on port 80")

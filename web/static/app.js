@@ -1,6 +1,6 @@
 "use strict";
 
-var lab = angular.module('lab', []);
+let lab = angular.module('lab', []);
 
 lab.controller('LabCtrl', function ($scope, $http, $timeout) {
   $scope.noun1 = "";
@@ -16,7 +16,7 @@ lab.controller('LabCtrl', function ($scope, $http, $timeout) {
     $scope.noun2 = word(resp);
   });
   getWord($http, $timeout, '/words/adjective', function(resp) {
-    var adj = word(resp);
+    let adj = word(resp);
     adj.word = adj.word.charAt(0).toUpperCase() + adj.word.substr(1)
     $scope.adjective1 = adj;
   });

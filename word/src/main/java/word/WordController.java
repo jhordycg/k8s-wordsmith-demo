@@ -12,7 +12,7 @@ import word.repositories.AdjectiveRepository;
 import word.repositories.NounRepository;
 import word.repositories.VerbRepository;
 
-@RestController
+@RestController()
 public class WordController {
     private final NounRepository nounRepository;
     private final AdjectiveRepository adjectiveRepository;
