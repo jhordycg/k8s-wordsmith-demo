@@ -12,3 +12,6 @@ CMD ["/dispatcher"]
 
 COPY --from=builder /go/dispatcher /
 COPY static /static/
+
+MAINTAINER jhordycg
+LABEL project=k8s-wordsmith

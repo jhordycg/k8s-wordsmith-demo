@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prom
+  labels:
+    app: words-prom
+spec:
+  selector:
+    matchLabels:
+      app: words-prom
+  template:
+    metadata:
+      labels:
+        app: words-prom
+    spec:
+      containers:
+        - name: prom
+          image: jhordycg/k8s-wordsmith-prom
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 9090
+              name: prom
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"

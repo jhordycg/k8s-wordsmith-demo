@@ -1,0 +1,15 @@
+namespace: 'wordsmith'
+resources:
+  - 'wordsmith-namespace.yml'
+
+  - 'prometheus-service.yml'
+  - 'frontend-service.yml'
+  - 'backend-service.yml'
+#  - 'sonar-service.yml'
+  - 'data-service.yml'
+
+  - 'prometheus-deployment.yml'
+  - 'frontend-deployment.yml'
+  - 'backend-deployment.yml'
+#  - 'sonar-deployment.yml'
+  - 'data-deployment.yml'

@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+  labels:
+    app: words-web
+spec:
+  selector:
+    matchLabels:
+      app: words-web
+  template:
+    metadata:
+      labels:
+        app: words-web
+    spec:
+      containers:
+      - name: web
+        image: jhordycg/k8s-wordsmith-web
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
+          name: web
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"

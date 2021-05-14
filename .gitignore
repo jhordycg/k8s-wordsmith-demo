@@ -3,4 +3,4 @@
 */.idea
 */*.iml
 */build
-kubernetes
+docker-build.bash

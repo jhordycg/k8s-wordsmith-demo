@@ -1,7 +1,0 @@
-spring:
-  profiles:
-    active: dockerfile
-  data:
-    r2dbc:
-      repositories:
-        enabled: true

@@ -4,8 +4,7 @@ plugins {
     id 'java'
 }
 
-group = ''
-version = '0.1.1-beta'
+version = '0.1-beta'
 sourceCompatibility = '1.8'
 
 repositories {
@@ -13,6 +12,8 @@ repositories {
 }
 
 dependencies {
+
+    // Webflux
     // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-webflux
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-webflux', version: '2.4.5'
     // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-r2dbc
@@ -21,6 +22,14 @@ dependencies {
     implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.20'
     // https://mvnrepository.com/artifact/io.r2dbc/r2dbc-postgresql
     implementation group: 'io.r2dbc', name: 'r2dbc-postgresql', version: '0.8.7.RELEASE'
+
+    // Metrics
+    // https://mvnrepository.com/artifact/io.micrometer/micrometer-core
+    implementation group: 'io.micrometer', name: 'micrometer-core', version: '1.7.0'
+    // https://mvnrepository.com/artifact/io.micrometer/micrometer-registry-prometheus
+    implementation group: 'io.micrometer', name: 'micrometer-registry-prometheus', version: '1.7.0'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '2.4.5'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'io.projectreactor:reactor-test'

@@ -3,14 +3,24 @@ version: '3.3'
 services:
   db:
     build: db
-    image: jhordycg/k8s-wordsmith-db
+    image: jhordycg/k8s-wordsmith-db:latest
+    ports:
+    - '5432:5432'
 
-  word:
+  api:
     build: word
-    image: jhordycg/k8s-wordsmith-api
+    image: jhordycg/k8s-wordsmith-api:latest
+    ports:
+      - '8080:8080'
 
   web:
     build: web
-    image: jhordycg/k8s-wordsmith-web
+    image: jhordycg/k8s-wordsmith-web:latest
     ports:
-     - "8080:80"
+      - '80:80'
+
+  prom:
+    build: prom
+    image: jhordycg/k8s-wordsmith-prom:latest
+    ports:
+      - '9090:9090'

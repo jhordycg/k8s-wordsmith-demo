@@ -8,4 +8,4 @@
  */
 
 rootProject.name = 'k8s-wordsmith-demo'
-include('word')
+include('api')

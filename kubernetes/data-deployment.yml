@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db
+  labels:
+    app: words-db
+spec:
+  selector:
+    matchLabels:
+      app: words-db
+  template:
+    metadata:
+      labels:
+        app: words-db
+    spec:
+      containers:
+      - name: db
+        image: jhordycg/k8s-wordsmith-db
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5432
+          name: db
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"

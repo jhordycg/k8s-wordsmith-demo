@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: development
+  data:
+    r2dbc:
+      repositories:
+        enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
